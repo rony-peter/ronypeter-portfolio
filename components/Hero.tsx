@@ -142,7 +142,6 @@ export default function Hero() {
       ref={heroRef}
       className="relative w-full h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden px-8 select-none"
     >
-      {/* --- GRID BACKGROUND --- */}
       <div className="absolute inset-0 pointer-events-none px-8">
         <div className="absolute inset-y-0 left-8 right-8 grid grid-cols-8 h-full w-[calc(100%-4rem)]">
           <div className="grid-line grid-line-v opacity-0 border-l border-white/10 h-full w-full"></div>
@@ -165,7 +164,6 @@ export default function Hero() {
         ref={containerRef}
         className="relative w-full h-full flex items-center justify-center z-10"
       >
-        {/* LAYER 10: Massive Typography BEHIND */}
         <div className="parallax-text absolute inset-0 flex items-center justify-center pointer-events-none z-10 overflow-hiddenWillChange">
           <h1 className="text-[13vw] font-black tracking-tighter text-[#EAEAEA] select-none flex whitespace-nowrap leading-none font-sans text-center justify-center items-center">
             {name.split("").map((char, index) => (
@@ -176,11 +174,9 @@ export default function Hero() {
           </h1>
         </div>
 
-        {/* LAYER 15: Particle Field Layer (Interjected between text and photo) */}
         <HeroParticles startAnimation={startAnimation} />
 
-        {/* LAYER 20: Cutout Profile Image FOREGROUND */}
-        <div className="parallax-image hero-image opacity-0 relative z-20 w-[280px] sm:w-[360px] md:w-[520px] aspect-[4/5] drop-shadow-xl filter contrast-[1.05]">
+        <div className="parallax-image hero-image opacity-0 relative z-20 w-70 sm:w-90 md:w-130 aspect-4/5 drop-shadow-xl filter contrast-[1.05]">
           <Image
             src="/images/my-cut-out.png"
             alt="Rony Peter Portrait"
