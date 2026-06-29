@@ -51,7 +51,7 @@ export default function FloatingNav({
       <div className="md:hidden fixed top-6 right-6 z-50">
         <div
           className={`flex flex-col items-end transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] bg-white/60 dark:bg-black/40 backdrop-blur-xl border border-white/20 shadow-lg overflow-hidden origin-top-right
-            ${isOpen ? "w-48 h-60 rounded-2xl p-2" : "w-12 h-12 rounded-full p-0"}
+            ${isOpen ? "w-48 h-auto rounded-2xl p-2" : "w-12 h-12 rounded-full p-0"}
           `}
         >
           <button
@@ -119,6 +119,17 @@ export default function FloatingNav({
                 </button>
               );
             })}
+            <a
+              href="/pdf/Rony-Peter.pdf"
+              download="Rony-Peter-Resume.pdf"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-left transition-all duration-200 whitespace-nowrap w-full text-gray-500 hover:text-black dark:hover:text-white"
+            >
+              <span className="text-base">📥</span>
+              <span className="font-sans font-semibold text-xs uppercase tracking-widest">
+                Resume
+              </span>
+            </a>
           </div>
         </div>
       </div>
@@ -149,6 +160,17 @@ export default function FloatingNav({
               </button>
             );
           })}
+
+          <a
+            href="/pdf/Rony-Peter.pdf"
+            download="Rony-Peter-Resume.pdf"
+            className="relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium tracking-tight transition-all duration-300 select-none text-gray-500 hover:text-black dark:hover:text-white hover:bg-white/20 dark:hover:bg-white/5"
+          >
+            <span className="text-base">📥</span>
+            <span className="font-sans font-semibold text-xs uppercase tracking-widest">
+              Resume
+            </span>
+          </a>
         </nav>
       </div>
     </>

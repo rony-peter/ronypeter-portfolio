@@ -45,6 +45,43 @@ const SKILLS_DATA = [
     ),
   },
   {
+    id: "nextjs",
+    name: "Next.js",
+    category: "HYBRID REACT ENGINE",
+    year: "2026",
+    color: "#EAEAEA",
+    svg: (
+      <svg viewBox="0 0 256 256" className="w-full h-full p-8 opacity-80">
+        <defs>
+          <linearGradient id="nGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#111111"/>
+            <stop offset="100%" stopColor="#444444"/>
+          </linearGradient>
+        </defs>
+
+        {/* Background */}
+        <circle cx="128" cy="128" r="108" fill="url(#nGradient)"/>
+
+        {/* Stylized N */}
+        <path
+          d="
+            M72 184
+            V72
+            H92
+            L164 154
+            V72
+            H184
+            V184
+            H164
+            L92 102
+            V184
+            Z"
+          fill="#ffffff"
+        />
+      </svg>
+    ),
+  },
+  {
     id: "nuxt",
     name: "Nuxt.js",
     category: "PRODUCTION HUB",
@@ -64,11 +101,174 @@ const SKILLS_DATA = [
         />
         <path
           d="M55 75L67.5 53L80 75H55Z"
-          fill="#00S852"
+          fill="#009852"
           stroke="#00DC82"
           strokeWidth="6"
           strokeLinejoin="round"
         />
+      </svg>
+    ),
+  },
+  {
+    id: "webflow",
+    name: "Webflow",
+    category: "VISUAL CMS & DEV",
+    year: "2024",
+    color: "#4353FF",
+    svg: (
+      <svg
+        viewBox="0 0 100 100"
+        className="w-full h-full p-8 opacity-80"
+        fill="none"
+        stroke="#4353FF"
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M20 25 L40 75 L55 45 L70 75 L90 25" />
+        <path d="M35 25 L50 60 L65 25" strokeOpacity="0.5" strokeWidth="4" />
+      </svg>
+    ),
+  },
+  {
+    id: "bootstrap",
+    name: "Bootstrap",
+    category: "CSS FRAMEWORK",
+    year: "2023",
+    color: "#7952B3",
+    svg: (
+      <svg viewBox="0 0 256 256" className="w-full h-full p-8 opacity-80">
+        <defs>
+          <linearGradient id="bootstrapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#8A5BFF"/>
+            <stop offset="100%" stopColor="#5B21D6"/>
+          </linearGradient>
+        </defs>
+        <rect
+          x="24"
+          y="24"
+          width="208"
+          height="208"
+          rx="44"
+          fill="url(#bootstrapGradient)"
+        />
+        <path
+          d="
+            M88 64
+            H138
+            C168 64 184 80 184 102
+            C184 118 174 128 160 132
+            C178 136 192 150 192 170
+            C192 196 172 208 140 208
+            H88
+            Z
+
+            M112 86
+            V122
+            H138
+            C152 122 160 116 160 104
+            C160 92 152 86 138 86
+            Z
+
+            M112 142
+            V186
+            H142
+            C158 186 168 178 168 164
+            C168 150 158 142 142 142
+            Z"
+          fill="#ffffff"
+        />
+      </svg>
+    ),
+  },
+  {
+    id: "aws",
+    name: "AWS",
+    category: "CLOUD PLATFORM",
+    year: "2024",
+    color: "#FF9900",
+    svg: (
+      <svg viewBox="0 0 128 128" className="w-full h-full p-8 opacity-90" fill="none">
+        <defs>
+          <linearGradient id="cloud" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#FFB84D"/>
+            <stop offset="100%" stopColor="#FF9900"/>
+          </linearGradient>
+        </defs>
+        <path
+          d="M96 54c-2-16-16-28-33-28-13 0-24 7-30 18-14 1-25 13-25 28 0 16 13 28 29 28h57c15 0 27-11 27-25 0-12-10-21-25-21z"
+          fill="url(#cloud)"
+        />
+        <path
+          d="M36 106 C55 118 77 118 94 106"
+          fill="none"
+          stroke="#FF9900"
+          strokeWidth="6"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    id: "netlify",
+    name: "Netlify",
+    category: "CDN & PIPELINES",
+    year: "2024",
+    color: "#00AD9F",
+    svg: (
+      <svg viewBox="0 0 256 256" className="w-full h-full p-8 opacity-80">
+        <defs>
+          <linearGradient id="netlify-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#00E6A8"/>
+            <stop offset="100%" stopColor="#00C7B7"/>
+          </linearGradient>
+        </defs>
+
+        <g transform="translate(48 28)">
+          {/* Top */}
+          <rect
+            x="55" y="0"
+            width="50" height="50"
+            rx="10"
+            transform="rotate(45 80 25)"
+            fill="url(#netlify-grad)"
+          />
+
+          {/* Left */}
+          <rect
+            x="0" y="55"
+            width="50" height="50"
+            rx="10"
+            transform="rotate(45 25 80)"
+            fill="url(#netlify-grad)"
+          />
+
+          {/* Right */}
+          <rect
+            x="110" y="55"
+            width="50" height="50"
+            rx="10"
+            transform="rotate(45 135 80)"
+            fill="url(#netlify-grad)"
+          />
+
+          {/* Bottom */}
+          <rect
+            x="55" y="110"
+            width="50" height="50"
+            rx="10"
+            transform="rotate(45 80 135)"
+            fill="url(#netlify-grad)"
+          />
+
+          {/* Center */}
+          <circle
+            cx="80"
+            cy="80"
+            r="12"
+            fill="#ffffff"
+          />
+        </g>
       </svg>
     ),
   },
@@ -165,29 +365,16 @@ const SKILLS_DATA = [
     ),
   },
   {
-    id: "postgres",
-    name: "PostgreSQL",
-    category: "DATABASE SCHEMA",
-    year: "2023",
-    color: "#336791",
+    id: "github",
+    name: "GitHub",
+    category: "VERSION CONTROL",
+    year: "2024",
+    color: "#FFFFFF",
     svg: (
       <svg viewBox="0 0 100 100" className="w-full h-full p-8 opacity-80">
-        <rect
-          x="25"
-          y="25"
-          width="50"
-          height="50"
-          rx="10"
-          stroke="#336791"
-          strokeWidth="4"
-          fill="none"
-        />
-        <circle cx="50" cy="50" r="12" fill="#336791" />
         <path
-          d="M32 50h36M50 32v36"
-          stroke="#336791"
-          strokeWidth="2"
-          strokeDasharray="3 3"
+          d="M50 10C27.91 10 10 27.91 10 50c0 17.65 11.45 32.61 27.32 37.83 2 .37 2.73-.87 2.73-1.93 0-.96-.04-4.22-.06-8.15-11.12 2.41-13.47-5.36-13.47-5.36-1.82-4.62-4.45-5.85-4.45-5.85-3.63-2.48.27-2.43.27-2.43 4.02.28 6.13 4.13 6.13 4.13 3.57 6.12 9.37 4.35 11.66 3.32.36-2.58 1.4-4.35 2.53-5.35-8.88-1.01-18.22-4.44-18.22-19.78 0-4.37 1.56-7.94 4.13-10.74-.41-1.01-1.79-5.08.39-10.59 0 0 3.36-1.07 11 4.11 3.19-.89 6.61-1.34 10.01-1.35 3.39.01 6.81.46 10.01 1.35 7.63-5.18 10.99-4.11 10.99-4.11 2.19 5.51.81 9.58.4 10.59 2.57 2.8 4.12 6.37 4.12 10.74 0 15.39-9.35 18.76-18.26 19.74 1.44 1.25 2.72 3.71 2.72 7.48 0 5.4-.05 9.75-.05 11.08 0 1.07.72 2.3 2.77 1.91C78.56 82.6 90 67.64 90 50c0-22.09-17.91-40-40-40z"
+          fill="#FFFFFF"
         />
       </svg>
     ),
@@ -599,12 +786,14 @@ export default function Body() {
       <section className="w-full overflow-hidden py-[3vw] border-y border-white/10 relative z-10 my-[8vw]">
         <div className="animate-marquee-text flex whitespace-nowrap text-[10vw] font-black tracking-tighter uppercase leading-none text-[#EAEAEA]/90 select-none">
           <span className="pr-12">
-            WHAT WE DO • CRAFTING DIGITAL EXPERIENCES • SENIOR FRONTEND ENGINEER
-            • INTERACTION DESIGNER •
+            MID-LEVEL FRONTEND ENGINEER • SAAS & MOBILE DEVELOPMENT • FULL STACK
+            ARCHITECTURE • REACT & NEXT.JS • INTERACTIVE UI DESIGN • PRODUCT
+            LIFECYCLE MANAGEMENT • HIGH-PERFORMANCE WEB SYSTEMS •
           </span>
           <span className="pr-12">
-            WHAT WE DO • CRAFTING DIGITAL EXPERIENCES • SENIOR FRONTEND ENGINEER
-            • INTERACTION DESIGNER •
+            MID-LEVEL FRONTEND ENGINEER • SAAS & MOBILE DEVELOPMENT • FULL STACK
+            ARCHITECTURE • REACT & NEXT.JS • INTERACTIVE UI DESIGN • PRODUCT
+            LIFECYCLE MANAGEMENT • HIGH-PERFORMANCE WEB SYSTEMS •
           </span>
         </div>
       </section>
