@@ -3,11 +3,15 @@
 import { useEffect, useState } from "react";
 import gsap from "gsap";
 
+interface FloatingNavProps {
+  startAnimation: boolean;
+  onNavigate: (tabName: string) => void;
+}
+
 export default function FloatingNav({
   startAnimation,
-}: {
-  startAnimation: boolean;
-}) {
+  onNavigate,
+}: FloatingNavProps) {
   const [activeTab, setActiveTab] = useState("Home");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,6 +40,11 @@ export default function FloatingNav({
     { name: "About", icon: "✨" },
     { name: "Contact", icon: "✉️" },
   ];
+
+  const handleTabSelection = (name: string) => {
+    setActiveTab(name);
+    onNavigate(name);
+  }
 
   return (
     <>
@@ -93,14 +102,13 @@ export default function FloatingNav({
                 <button
                   key={item.name}
                   onClick={() => {
-                    setActiveTab(item.name);
+                    handleTabSelection(item.name);
                     setIsOpen(false);
                   }}
                   className={`flex items-center gap-3 px-4 py-2.5 rounded-xl text-left transition-all duration-200 whitespace-nowrap w-full
-                    ${
-                      isActive
-                        ? "text-black dark:text-white bg-white dark:bg-white/10 shadow-sm"
-                        : "text-gray-500 hover:text-black dark:hover:text-white"
+                    ${isActive
+                      ? "text-black dark:text-white bg-white dark:bg-white/10 shadow-sm"
+                      : "text-gray-500 hover:text-black dark:hover:text-white"
                     }
                   `}
                 >
@@ -122,12 +130,11 @@ export default function FloatingNav({
             return (
               <button
                 key={item.name}
-                onClick={() => setActiveTab(item.name)}
+                onClick={() => handleTabSelection(item.name)}
                 className={`relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium tracking-tight transition-all duration-300 select-none
-                  ${
-                    isActive
-                      ? "text-black dark:text-white bg-white/60 dark:bg-white/10 shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
-                      : "text-gray-500 hover:text-black dark:hover:text-white hover:bg-white/20 dark:hover:bg-white/5"
+                  ${isActive
+                    ? "text-black dark:text-white bg-white/60 dark:bg-white/10 shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
+                    : "text-gray-500 hover:text-black dark:hover:text-white hover:bg-white/20 dark:hover:bg-white/5"
                   }
                 `}
               >

@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import FloatingNav from "./FloatingNav";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -199,23 +200,29 @@ export default function Body() {
   const scrollPathRef = useRef<SVGPathElement>(null);
   const scrollGlowRef = useRef<SVGPathElement>(null);
   const [activeSkillId, setActiveSkillId] = useState<string | null>(null);
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+    const delayTimer = setTimeout(() => {
+      setStartAnimation(true);
+    }, 4000);
+
+    return () => clearTimeout(delayTimer);
+  }, []);
 
   useGSAP(
     () => {
-      // 1. Scroll-Driven Curvy SVG Path Drawing
       const mainPath = scrollPathRef.current;
       const glowPath = scrollGlowRef.current;
 
       if (mainPath && glowPath) {
         const pathLength = mainPath.getTotalLength();
-        
-        // Synchronize initial state for both sharp line and background glow
+
         gsap.set([mainPath, glowPath], {
           strokeDasharray: pathLength,
           strokeDashoffset: pathLength,
         });
 
-        // Sync stroke offsets dynamically with scroll tracking
         gsap.to([mainPath, glowPath], {
           strokeDashoffset: 0,
           ease: "none",
@@ -228,7 +235,6 @@ export default function Body() {
         });
       }
 
-      // 2. Existing Elements entrance timelines
       gsap.fromTo(
         ".hero-text-line",
         { y: 30, opacity: 0 },
@@ -303,7 +309,6 @@ export default function Body() {
         },
       );
 
-      // QuickTo configurations for smooth card following
       const xTo = gsap.quickTo(hoverCardRef.current, "x", {
         duration: 0.35,
         ease: "power3.out",
@@ -351,6 +356,20 @@ export default function Body() {
     });
   };
 
+  const handleNavigate = (tabName: string) => {
+    const targetId = tabName.toLowerCase();
+    if (targetId === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
+
+  const currentSkill = SKILLS_DATA.find((s) => s.id === activeSkillId) || SKILLS_DATA[0];
+
   return (
     <div
       ref={containerRef}
@@ -368,7 +387,6 @@ export default function Body() {
         }
       `}</style>
 
-      {/* Decorative Static Grid Lines Layer */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-0 bottom-0 left-[5vw] w-px border-l border-dashed border-white/5" />
         <div className="absolute top-0 bottom-0 left-[35vw] w-px border-l border-dashed border-white/2" />
@@ -379,7 +397,6 @@ export default function Body() {
         <div className="absolute bottom-[15vh] left-0 right-0 h-px border-b border-dashed border-white/5" />
       </div>
 
-      {/* Dynamic Animated Scroll SVG Path (Curvy + Neon Gradient) */}
       <div className="absolute inset-0 pointer-events-none z-0 w-full h-full">
         <svg
           className="w-full h-full"
@@ -394,7 +411,7 @@ export default function Body() {
               <stop offset="65%" stopColor="#88CE02" stopOpacity="0.6" />
               <stop offset="100%" stopColor="#FF7262" stopOpacity="0.8" />
             </linearGradient>
-            
+
             <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="0.8" result="blur" />
               <feMerge>
@@ -404,7 +421,6 @@ export default function Body() {
             </filter>
           </defs>
 
-          {/* Background Core Glow Ambient Line */}
           <path
             ref={scrollGlowRef}
             d="M 10,0 C 15,15 50,10 65,25 C 80,40 20,45 35,60 C 50,75 85,75 80,100"
@@ -415,7 +431,6 @@ export default function Body() {
             opacity="0.35"
           />
 
-          {/* Foreground Crisp Curvy Line */}
           <path
             ref={scrollPathRef}
             d="M 10,0 C 15,15 50,10 65,25 C 80,40 20,45 35,60 C 50,75 85,75 80,100"
@@ -426,9 +441,8 @@ export default function Body() {
         </svg>
       </div>
 
-      {/* Segment 1: Header and Timelines Wrapper */}
       <div className="w-[90%] mx-auto relative z-10 mb-[8vw] space-y-[8vw]">
-        <section className="space-y-[2vw]">
+        <section id="work" className="space-y-[2vw]">
           <div className="section-header-1 max-w-[65vw] space-y-[1.5vw] relative">
             <p className="text-[clamp(10px,0.8vw,14px)] font-mono tracking-widest text-gray-500 uppercase flex items-center gap-[0.5vw]">
               <span className="w-[0.4vw] h-[0.4vw] min-w-1.25 min-h-1.25 rounded-full bg-white/40 inline-block" />
@@ -582,7 +596,6 @@ export default function Body() {
         </section>
       </div>
 
-      {/* Continuous Auto-Scrolling Marquee — Positioned Out of bounds for Full screen bleed */}
       <section className="w-full overflow-hidden py-[3vw] border-y border-white/10 relative z-10 my-[8vw]">
         <div className="animate-marquee-text flex whitespace-nowrap text-[10vw] font-black tracking-tighter uppercase leading-none text-[#EAEAEA]/90 select-none">
           <span className="pr-12">
@@ -596,9 +609,8 @@ export default function Body() {
         </div>
       </section>
 
-      {/* Segment 2: Skills Stack Wrapper */}
       <div className="w-[90%] mx-auto relative z-10 mt-[8vw]">
-        <section className="pt-[4vw] border-t border-white/10 relative">
+        <section id="about" className="pt-[4vw] border-t border-white/10 relative">
           <div>
             <div className="section-header-2">
               <p className="text-[clamp(10px,0.8vw,14px)] font-mono tracking-widest text-gray-500 uppercase flex items-center gap-[0.5vw]">
@@ -657,18 +669,17 @@ export default function Body() {
         </section>
       </div>
 
-      {/* Floating Cursor/Hover Card Toolkit */}
       <div
         ref={hoverCardRef}
-        className="fixed pointer-events-none z-50 overflow-hidden rounded-[20px] bg-[#111111]/90 backdrop-blur-md border border-white/15 shadow-[0_16px_48px_rgba(0,0,0,0.8)] w-60 h-60 opacity-0 scale-75 origin-center select-none flex flex-col justify-between p-4"
+        className="fixed top-0 left-0 pointer-events-none z-50 overflow-hidden rounded-3xl bg-[#111111]/90 backdrop-blur-xs border border-white/15 shadow-[0_16px_48px_rgba(0,0,0,0.8)] w-60 h-auto opacity-0 scale-75 origin-center select-none flex flex-col justify-between p-4"
         style={{
           boxShadow: activeSkillId
-            ? `0 16px 48px -12px ${SKILLS_DATA.find((s) => s.id === activeSkillId)?.color}33`
+            ? `0 16px 48px -12px ${currentSkill.color}33`
             : "none",
         }}
       >
         <div className="flex-1 flex items-center justify-center">
-          {SKILLS_DATA.find((s) => s.id === activeSkillId)?.svg}
+          {currentSkill.svg}
         </div>
 
         <div className="flex justify-between items-end border-t border-white/5 pt-2 mt-2">
@@ -677,22 +688,21 @@ export default function Body() {
               Focus Hub
             </span>
             <span className="text-sm font-bold text-white">
-              {SKILLS_DATA.find((s) => s.id === activeSkillId)?.name ||
-                "Technology"}
+              {currentSkill.name}
             </span>
           </div>
           <span
-            className="text-[10px] font-mono px-2 py-0.5 rounded-full border border-white/10 text-white"
+            className="text-[10px] font-mono px-2 py-0.5 rounded-full border border-white/10"
             style={{
-              borderColor: SKILLS_DATA.find((s) => s.id === activeSkillId)
-                ?.color,
-              color: SKILLS_DATA.find((s) => s.id === activeSkillId)?.color,
+              borderColor: currentSkill.color,
+              color: currentSkill.color,
             }}
           >
             ACTIVE
           </span>
         </div>
       </div>
+      <FloatingNav startAnimation={startAnimation} onNavigate={handleNavigate} />
     </div>
   );
 }

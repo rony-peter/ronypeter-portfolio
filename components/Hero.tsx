@@ -4,7 +4,6 @@ import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import FloatingNav from "./FloatingNav";
 import HeroParticles from "./HeroParticles";
 
 export default function Hero() {
@@ -187,7 +186,6 @@ export default function Hero() {
           />
         </div>
       </div>
-      <FloatingNav startAnimation={startAnimation} />
     </section>
   );
 }
