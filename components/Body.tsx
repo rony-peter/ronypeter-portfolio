@@ -652,23 +652,24 @@ export default function Body() {
           </div>
         </section>
 
-        <section>
+       <section>
           <div className="timeline-grid grid grid-cols-1 xl:grid-cols-3 gap-[2.5vw] items-stretch">
+            {/* Dibasys Card */}
             <div className="timeline-card bg-white/1 hover:bg-white/2 border border-white/10 rounded-[1.8vw] p-[2.5vw] flex flex-col justify-between backdrop-blur-md transition-all duration-300 group relative">
               <div>
                 <div className="flex items-center justify-between border-b border-white/5 pb-[1vw]">
                   <span className="text-[clamp(10px,0.8vw,13px)] font-mono tracking-widest text-gray-500">
-                    2023 — 2026
+                    Dec 2023 — Jun 2026
                   </span>
                   <span className="text-[clamp(9px,0.7vw,11px)] font-mono px-[0.6vw] py-[0.15vw] rounded border border-white/10 text-gray-400 uppercase tracking-wider">
                     SaaS & Mobile
                   </span>
                 </div>
                 <h4 className="text-[1.6vw] font-bold text-white mt-[1.8vw] tracking-tight">
-                  Senior Frontend Engineer
+                  Mid-Level Frontend Engineer
                 </h4>
                 <p className="text-[clamp(12px,0.9vw,15px)] font-semibold text-gray-400 mt-[0.2vw] font-mono">
-                  Dibasys Pvt Ltd
+                  Dibasys Pvt Ltd — Pala, India
                 </p>
                 <ul className="mt-[1.8vw] space-y-[0.8vw] text-[clamp(13px,1vw,16px)] text-gray-400 font-sans leading-relaxed list-none">
                   <li className="flex items-start gap-[0.6vw]">
@@ -676,8 +677,7 @@ export default function Body() {
                       ■
                     </span>
                     <span>
-                      Managed end-to-end full product lifecycles using Agile
-                      Scrum frameworks.
+                      Drove Scrum practices, stand-ups, and sprint planning increasing on-time product delivery by 25%.
                     </span>
                   </li>
                   <li className="flex items-start gap-[0.6vw]">
@@ -685,22 +685,30 @@ export default function Body() {
                       ■
                     </span>
                     <span>
-                      Achieved a 50% increase in layout performance and load
-                      optimization.
+                      Developed custom SaaS timesheets, attendance geofencing with Flutter, and integrated Xero, MYOB, & Autodesk.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-[0.6vw]">
+                    <span className="text-white/30 mt-[0.4vw] text-[clamp(8px,0.6vw,11px)]">
+                      ■
+                    </span>
+                    <span>
+                      Authored AI refactoring guides for Copilot & Claude, boosting development efficiency by 35%.
                     </span>
                   </li>
                 </ul>
               </div>
               <div className="text-[clamp(10px,0.75vw,13px)] font-mono text-gray-600 uppercase tracking-widest pt-[1.5vw] mt-[1.8vw] border-t border-white/5">
-                Ecosystem Core
+                Core SaaS Ecosystem
               </div>
             </div>
 
+            {/* Codea Technologies Card */}
             <div className="timeline-card bg-white/1 hover:bg-white/2 border border-white/10 rounded-[1.8vw] p-[2.5vw] flex flex-col justify-between backdrop-blur-md transition-all duration-300 group relative">
               <div>
                 <div className="flex items-center justify-between border-b border-white/5 pb-[1vw]">
                   <span className="text-[clamp(10px,0.8vw,13px)] font-mono tracking-widest text-gray-500">
-                    2023
+                    Jan 2023 — Nov 2023
                   </span>
                   <span className="text-[clamp(9px,0.7vw,11px)] font-mono px-[0.6vw] py-[0.15vw] rounded border border-white/10 text-gray-400 uppercase tracking-wider">
                     Web Apps
@@ -710,7 +718,7 @@ export default function Body() {
                   Software Developer
                 </h4>
                 <p className="text-[clamp(12px,0.9vw,15px)] font-semibold text-gray-400 mt-[0.2vw] font-mono">
-                  Codea Technologies
+                  Codea Technologies — Kochi, India
                 </p>
                 <ul className="mt-[1.8vw] space-y-[0.8vw] text-[clamp(13px,1vw,16px)] text-gray-400 font-sans leading-relaxed list-none">
                   <li className="flex items-start gap-[0.6vw]">
@@ -718,8 +726,7 @@ export default function Body() {
                       ■
                     </span>
                     <span>
-                      Led responsive, mobile-first design system reviews raising
-                      interaction by 30%.
+                      Collaborated on an IT Help-desk web application, increasing ticket resolution efficiency by 20%.
                     </span>
                   </li>
                   <li className="flex items-start gap-[0.6vw]">
@@ -727,32 +734,40 @@ export default function Body() {
                       ■
                     </span>
                     <span>
-                      Optimized PostgreSQL query data extraction loops, shaving
-                      15% off latencies.
+                      Optimized PostgreSQL data loops, reducing query response times by 15%.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-[0.6vw]">
+                    <span className="text-white/30 mt-[0.4vw] text-[clamp(8px,0.6vw,11px)]">
+                      ■
+                    </span>
+                    <span>
+                      Led mobile-first design system reviews raising cross-device user engagement by 30%.
                     </span>
                   </li>
                 </ul>
               </div>
               <div className="text-[clamp(10px,0.75vw,13px)] font-mono text-gray-600 uppercase tracking-widest pt-[1.5vw] mt-[1.8vw] border-t border-white/5">
-                Database & Systems
+                Systems & Optimization
               </div>
             </div>
 
+            {/* Luminar Technolab Card */}
             <div className="timeline-card bg-white/1 hover:bg-white/2 border border-white/10 rounded-[1.8vw] p-[2.5vw] flex flex-col justify-between backdrop-blur-md transition-all duration-300 group relative">
               <div>
                 <div className="flex items-center justify-between border-b border-white/5 pb-[1vw]">
                   <span className="text-[clamp(10px,0.8vw,13px)] font-mono tracking-widest text-gray-500">
-                    2022 — 2023
+                    Oct 2022 — Jan 2023
                   </span>
                   <span className="text-[clamp(9px,0.7vw,11px)] font-mono px-[0.6vw] py-[0.15vw] rounded border border-white/10 text-gray-400 uppercase tracking-wider">
                     Full Stack
                   </span>
                 </div>
                 <h4 className="text-[1.6vw] font-bold text-white mt-[1.8vw] tracking-tight">
-                  MEARN Stack Intern
+                  MEARN Stack Developer (Intern)
                 </h4>
                 <p className="text-[clamp(12px,0.9vw,15px)] font-semibold text-gray-400 mt-[0.2vw] font-mono">
-                  Luminar Technolab
+                  Luminar Technolab — India
                 </p>
                 <ul className="mt-[1.8vw] space-y-[0.8vw] text-[clamp(13px,1vw,16px)] text-gray-400 font-sans leading-relaxed list-none">
                   <li className="flex items-start gap-[0.6vw]">
@@ -760,8 +775,7 @@ export default function Body() {
                       ■
                     </span>
                     <span>
-                      Shipped and maintained end-to-end API integration layers
-                      for over 5 live apps.
+                      Developed and demonstrated 5+ full-stack web applications featuring end-to-end API integrations.
                     </span>
                   </li>
                   <li className="flex items-start gap-[0.6vw]">
@@ -769,14 +783,13 @@ export default function Body() {
                       ■
                     </span>
                     <span>
-                      Reduced prototyping cycles by 40% using optimized
-                      component modules.
+                      Refined fluid, responsive layouts using Bootstrap, decreasing prototyping lifecycles by 40%.
                     </span>
                   </li>
                 </ul>
               </div>
               <div className="text-[clamp(10px,0.75vw,13px)] font-mono text-gray-600 uppercase tracking-widest pt-[1.5vw] mt-[1.8vw] border-t border-white/5">
-                Integration & Dev
+                Integrations & Layouts
               </div>
             </div>
           </div>
