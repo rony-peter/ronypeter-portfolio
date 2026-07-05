@@ -109,6 +109,14 @@ export default function Footer() {
             >
               LinkedIn
             </a>
+            <a
+              href="https://github.com/rony-peter"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[clamp(14px,1.8vw,28px)] font-bold tracking-tight hover:text-white/60 transition-all duration-300"
+            >
+              GitHub
+            </a>
           </div>
         </div>
       </div>
