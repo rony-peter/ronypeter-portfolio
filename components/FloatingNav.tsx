@@ -135,7 +135,7 @@ export default function FloatingNav({
       </div>
 
       <div className="hidden md:block fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-auto">
-        <nav className="floating-nav-dock opacity-0 flex items-center gap-2 px-4 py-3 rounded-full bg-white/40 dark:bg-black/30 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.08)] transition-all duration-300">
+        <nav className="floating-nav-dock opacity-0 flex items-center gap-2 px-4 py-3 rounded-full bg-black/30 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.08)] transition-all duration-300">
           {navItems.map((item) => {
             const isActive = activeTab === item.name;
             return (
