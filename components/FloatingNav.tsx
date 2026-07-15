@@ -50,7 +50,7 @@ export default function FloatingNav({
     <>
       <div className="md:hidden fixed top-6 right-6 z-50">
         <div
-          className={`flex flex-col items-end transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] bg-white/60 dark:bg-black/40 backdrop-blur-xl border border-white/20 shadow-lg overflow-hidden origin-top-right
+          className={`flex flex-col items-end transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] bg-black/40 backdrop-blur-xl border border-white/20 shadow-lg overflow-hidden origin-top-right
             ${isOpen ? "w-48 h-auto rounded-2xl p-2" : "w-12 h-12 rounded-full p-0"}
           `}
         >
