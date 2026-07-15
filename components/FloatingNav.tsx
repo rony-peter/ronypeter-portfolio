@@ -164,7 +164,7 @@ export default function FloatingNav({
           <a
             href="/pdf/Rony-Peter.pdf"
             download="Rony-Peter-Resume.pdf"
-            className="relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium tracking-tight transition-all duration-300 select-none text-black hover:text-white hover:bg-white/5"
+            className="relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium tracking-tight transition-all duration-300 select-none text-gray-500 hover:text-white hover:bg-white/5"
           >
             <span className="text-base">📥</span>
             <span className="font-sans font-semibold text-xs uppercase tracking-widest">
