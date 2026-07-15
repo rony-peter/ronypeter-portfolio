@@ -56,7 +56,7 @@ export default function FloatingNav({
         >
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="w-12 h-12 min-h-12 flex items-center justify-center rounded-full transition-transform duration-300 active:scale-95 text-black dark:text-white"
+            className="w-12 h-12 min-h-12 flex items-center justify-center rounded-full transition-transform duration-300 active:scale-95 text-white"
           >
             {isOpen ? (
               <svg
@@ -107,8 +107,8 @@ export default function FloatingNav({
                   }}
                   className={`flex items-center gap-3 px-4 py-2.5 rounded-xl text-left transition-all duration-200 whitespace-nowrap w-full
                     ${isActive
-                      ? "text-black dark:text-white bg-white dark:bg-white/10 shadow-sm"
-                      : "text-gray-500 hover:text-black dark:hover:text-white"
+                      ? "text-white bg-white/10 shadow-sm"
+                      : "text-gray-500 hover:text-white"
                     }
                   `}
                 >
@@ -123,7 +123,7 @@ export default function FloatingNav({
               href="/pdf/Rony-Peter.pdf"
               download="Rony-Peter-Resume.pdf"
               onClick={() => setIsOpen(false)}
-              className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-left transition-all duration-200 whitespace-nowrap w-full text-gray-500 hover:text-black dark:hover:text-white"
+              className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-left transition-all duration-200 whitespace-nowrap w-full text-gray-500 hover:text-white"
             >
               <span className="text-base">📥</span>
               <span className="font-sans font-semibold text-xs uppercase tracking-widest">
@@ -144,8 +144,8 @@ export default function FloatingNav({
                 onClick={() => handleTabSelection(item.name)}
                 className={`relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium tracking-tight transition-all duration-300 select-none
                   ${isActive
-                    ? "text-black dark:text-white bg-white/60 dark:bg-white/10 shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
-                    : "text-gray-500 hover:text-black dark:hover:text-white hover:bg-white/20 dark:hover:bg-white/5"
+                    ? "text-white bg-white/10 shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
+                    : "text-gray-500 hover:text-white hover:bg-white/5"
                   }
                 `}
               >
@@ -155,7 +155,7 @@ export default function FloatingNav({
                 </span>
 
                 {isActive && (
-                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-black dark:bg-white animate-fade-in" />
+                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-white animate-fade-in" />
                 )}
               </button>
             );
@@ -164,7 +164,7 @@ export default function FloatingNav({
           <a
             href="/pdf/Rony-Peter.pdf"
             download="Rony-Peter-Resume.pdf"
-            className="relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium tracking-tight transition-all duration-300 select-none text-gray-500 hover:text-black dark:hover:text-white hover:bg-white/20 dark:hover:bg-white/5"
+            className="relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium tracking-tight transition-all duration-300 select-none text-black hover:text-white hover:bg-white/5"
           >
             <span className="text-base">📥</span>
             <span className="font-sans font-semibold text-xs uppercase tracking-widest">
