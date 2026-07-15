@@ -1,4 +1,4 @@
-"use client";
+3"use client";
 
 import { useRef, useState } from "react";
 import gsap from "gsap";
@@ -62,7 +62,7 @@ export default function Footer() {
     <footer
       ref={footerRef}
       id="contact"
-      className="w-full bg-[#F9F9F9] text-white pt-[6vw] pb-[2.5vw] px-[5vw] select-none relative z-10 border-t border-dashed border-white/10 scroll-mt-24 flex flex-col justify-between overflow-hidden"
+      className="w-full bg-[#E5E5E5]/5 text-white pt-[6vw] pb-[2.5vw] px-[5vw] select-none relative z-10 border-t border-dashed border-white/10 scroll-mt-24 flex flex-col justify-between overflow-hidden"
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 w-full mb-[4vw]">
         {/* Left Column: Contacts */}
