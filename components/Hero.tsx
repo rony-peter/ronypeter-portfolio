@@ -25,7 +25,7 @@ export default function Hero() {
 
       const tl = gsap.timeline();
 
-      gsap.set([".grid-line", ".bg-text-char", ".hero-image", ".hero-subtitle"], { opacity: 1 });
+      gsap.set([".grid-line", ".bg-text-char", ".hero-image"], { opacity: 1 });
 
       tl.from(".grid-line-v", {
         scaleY: 0,
@@ -57,17 +57,6 @@ export default function Hero() {
           stagger: 0.03,
         },
         "-=0.8",
-      );
-
-      tl.from(
-        ".hero-subtitle",
-        {
-          y: 30,
-          opacity: 0,
-          duration: 1,
-          ease: "power3.out",
-        },
-        "-=0.6",
       );
 
       tl.from(
@@ -150,7 +139,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative w-full h-auto min-h-screen lg:h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden py-20 lg:py-0 px-8 select-none"
+      className="relative w-full min-h-dvh lg:h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden px-8 select-none"
     >
       <div className="absolute inset-0 pointer-events-none px-8">
         <div className="absolute inset-y-0 left-8 right-8 grid grid-cols-8 h-full w-[calc(100%-4rem)]">
@@ -172,24 +161,21 @@ export default function Hero() {
 
       <div
         ref={containerRef}
-        className="relative w-full h-full flex flex-col items-center justify-center z-10 my-auto"
+        className="relative w-full h-full flex items-center justify-center z-10"
       >
-        <div className="parallax-text absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10 overflow-hiddenWillChange">
-          <h1 className="text-[12vw] sm:text-[13vw] font-black tracking-tighter text-[#EAEAEA] select-none flex whitespace-nowrap leading-none font-sans text-center justify-center items-center">
+        <div className="parallax-text absolute inset-0 flex items-center justify-center pointer-events-none z-10 overflow-hiddenWillChange">
+          <h1 className="text-[13vw] font-black tracking-tighter text-[#EAEAEA] select-none flex whitespace-nowrap leading-none font-sans text-center justify-center items-center">
             {name.split("").map((char, index) => (
               <span key={index} className="bg-text-char opacity-0 inline-block">
                 {char === " " ? "\u00A0" : char}
               </span>
             ))}
           </h1>
-          <p className="hero-subtitle opacity-0 text-xs sm:text-sm md:text-base font-mono uppercase tracking-[0.3em] text-gray-400 mt-2">
-            Frontend Engineer
-          </p>
         </div>
 
         <HeroParticles startAnimation={startAnimation} />
 
-        <div className="parallax-image hero-image opacity-0 relative z-20 w-64 sm:w-80 md:w-130 aspect-4/5 drop-shadow-xl filter contrast-[1.05] mt-12 lg:mt-0">
+        <div className="parallax-image hero-image opacity-0 relative z-20 w-70 sm:w-90 md:w-130 aspect-4/5 drop-shadow-xl filter contrast-[1.05]">
           <Image
             src="/images/my-cut-out.png"
             alt="Rony Peter Portrait"
