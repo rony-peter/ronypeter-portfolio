@@ -134,12 +134,12 @@ export default function Hero() {
     { scope: heroRef, dependencies: [startAnimation] },
   );
 
-  const name = "RONY PETER";
+  const name = "Rony Peter";
 
   return (
     <section
       ref={heroRef}
-      className="relative w-full min-h-dvh lg:h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden px-8 select-none"
+      className="relative w-full sm:h-[70vh] md:h-screen lg:h-screen bg-black text-white flex flex-col justify-center items-center overflow-hidden px-8 select-none"
     >
       <div className="absolute inset-0 pointer-events-none px-8">
         <div className="absolute inset-y-0 left-8 right-8 grid grid-cols-8 h-full w-[calc(100%-4rem)]">

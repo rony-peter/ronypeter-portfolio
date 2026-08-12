@@ -633,28 +633,26 @@ export default function Body() {
           <div className="section-header-1 max-w-[65vw] space-y-[1.5vw] relative">
             <p className="text-[clamp(10px,0.8vw,14px)] font-mono tracking-widest text-gray-500 uppercase flex items-center gap-[0.5vw]">
               <span className="w-[0.4vw] h-[0.4vw] min-w-1.25 min-h-1.25 rounded-full bg-white/40 inline-block" />
-              Executive Summary & Timeline
+              Professional Experience & History
             </p>
             <h2 className="text-[4.2vw] font-bold font-sans tracking-tight leading-[1.1] text-[#EAEAEA]">
               <span className="hero-text-line block">
-                Architecting scalable SaaS, mobile,
+                Track record of professional impact
               </span>
               <span className="hero-text-line block text-white/50">
-                and progressive web ecosystems.
+                across scalable SaaS & enterprises.
               </span>
             </h2>
             <p className="hero-text-line text-[clamp(14px,1.2vw,20px)] text-gray-400 font-sans max-w-[45vw] pt-[1vw] leading-relaxed">
-              Senior Frontend Engineer specializing in transforming
-              sophisticated product designs into high-performance user
-              interfaces while optimizing core delivery speeds up to 50%.
+              Demonstrated progression from frontend implementation to engineering leadership, driving performance improvements up to 50%.
             </p>
             <div className="w-full pt-[2vw] border-b border-dashed border-white/10" />
           </div>
         </section>
 
-       <section>
+        <section>
           <div className="timeline-grid grid grid-cols-1 xl:grid-cols-3 gap-[2.5vw] items-stretch">
-            {/* Dibasys Card */}
+            {/* Dibasys - Mid-Level & Junior Card */}
             <div className="timeline-card bg-white/1 hover:bg-white/2 border border-white/10 rounded-[1.8vw] p-[2.5vw] flex flex-col justify-between backdrop-blur-md transition-all duration-300 group relative">
               <div>
                 <div className="flex items-center justify-between border-b border-white/5 pb-[1vw]">
@@ -666,7 +664,7 @@ export default function Body() {
                   </span>
                 </div>
                 <h4 className="text-[1.6vw] font-bold text-white mt-[1.8vw] tracking-tight">
-                  Mid-Level Frontend Engineer
+                  Mid-Level & Junior Frontend Engineer
                 </h4>
                 <p className="text-[clamp(12px,0.9vw,15px)] font-semibold text-gray-400 mt-[0.2vw] font-mono">
                   Dibasys Pvt Ltd — Pala, India
@@ -677,7 +675,7 @@ export default function Body() {
                       ■
                     </span>
                     <span>
-                      Drove Scrum practices, stand-ups, and sprint planning increasing on-time product delivery by 25%.
+                      Promoted to Mid-Level, leading Vue/Nuxt architecture for Swift Checkin SaaS and boosting page performance by 50%.
                     </span>
                   </li>
                   <li className="flex items-start gap-[0.6vw]">
@@ -685,7 +683,7 @@ export default function Body() {
                       ■
                     </span>
                     <span>
-                      Developed custom SaaS timesheets, attendance geofencing with Flutter, and integrated Xero, MYOB, & Autodesk.
+                      Built cross-platform Flutter geofenced attendance apps and integrated complex accounting APIs (Xero, MYOB, Autodesk).
                     </span>
                   </li>
                   <li className="flex items-start gap-[0.6vw]">
@@ -693,13 +691,13 @@ export default function Body() {
                       ■
                     </span>
                     <span>
-                      Authored AI refactoring guides for Copilot & Claude, boosting development efficiency by 35%.
+                      Authored AI internal guidelines (Claude/Copilot/Gemini) increasing refactoring efficiency by 35%.
                     </span>
                   </li>
                 </ul>
               </div>
               <div className="text-[clamp(10px,0.75vw,13px)] font-mono text-gray-600 uppercase tracking-widest pt-[1.5vw] mt-[1.8vw] border-t border-white/5">
-                Core SaaS Ecosystem
+                Core SaaS Architecture
               </div>
             </div>
 
@@ -734,7 +732,7 @@ export default function Body() {
                       ■
                     </span>
                     <span>
-                      Optimized PostgreSQL data loops, reducing query response times by 15%.
+                      Streamlined PostgreSQL queries to reduce database data retrieval time by 15%.
                     </span>
                   </li>
                   <li className="flex items-start gap-[0.6vw]">
@@ -767,7 +765,7 @@ export default function Body() {
                   MEARN Stack Developer (Intern)
                 </h4>
                 <p className="text-[clamp(12px,0.9vw,15px)] font-semibold text-gray-400 mt-[0.2vw] font-mono">
-                  Luminar Technolab — India
+                  Luminar Technolab — Kochi, India
                 </p>
                 <ul className="mt-[1.8vw] space-y-[0.8vw] text-[clamp(13px,1vw,16px)] text-gray-400 font-sans leading-relaxed list-none">
                   <li className="flex items-start gap-[0.6vw]">
@@ -775,7 +773,7 @@ export default function Body() {
                       ■
                     </span>
                     <span>
-                      Developed and demonstrated 5+ full-stack web applications featuring end-to-end API integrations.
+                      Developed and demonstrated 5+ full-stack web applications featuring end-to-end API integrations to mentors.
                     </span>
                   </li>
                   <li className="flex items-start gap-[0.6vw]">
@@ -783,7 +781,7 @@ export default function Body() {
                       ■
                     </span>
                     <span>
-                      Refined fluid, responsive layouts using Bootstrap, decreasing prototyping lifecycles by 40%.
+                      Refined responsive layouts using Bootstrap, decreasing prototyping lifecycles for new prototypes by 40%.
                     </span>
                   </li>
                 </ul>
