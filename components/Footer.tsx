@@ -125,7 +125,6 @@ export default function Footer() {
         <h2
           ref={giantTextRef}
           className="text-[13vw] font-black tracking-tighter leading-none uppercase text-center w-full select-none cursor-default font-sans transform-gpu text-white"
-          style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
         >
           RONY PETER
         </h2>
